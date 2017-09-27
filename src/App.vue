@@ -1,17 +1,20 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
+  <div>
+    <top-menu/>
+    <div class="section">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
+import TopMenu from './components/TopMenu'
 export default {
-  name: 'app'
+  name: 'app',
+  components: { TopMenu }
 }
 </script>
 
 <style lang="scss">
-$fa-font-path: "~font-awesome/fonts";
-@import "~font-awesome/scss/font-awesome.scss";
-@import "~bulma/bulma";
+@import "./assets/sass/app.scss";
 </style>
