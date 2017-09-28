@@ -32,5 +32,6 @@ export default new Router({
       component: Announcements,
       beforeEnter: AuthGuard
     }
-  ]
+  ],
+  mode: 'history'
 })
