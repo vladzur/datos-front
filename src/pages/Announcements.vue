@@ -2,7 +2,7 @@
   <div class="container">
     <h1>Anuncios</h1>
     <div class="columns" v-for="(item, key) in announcements" :key="key">
-      <div class="column is-4">
+      <div class="column is-9 is-offset-2">
         <div class="card">
           <div class="card-content">
             <div class="media">
