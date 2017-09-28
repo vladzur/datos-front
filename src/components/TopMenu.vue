@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar is-dark">
+  <nav class="navbar is-info">
     <div class="navbar-brand">
       <router-link class="navbar-item" to="/" exact>
         Home
