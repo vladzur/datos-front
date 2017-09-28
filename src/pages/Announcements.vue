@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Anuncios</h1>
+    <h1 class="title">Anuncios</h1>
     <div class="columns" v-for="(item, key) in announcements" :key="key">
       <div class="column is-9 is-offset-2">
         <div class="card">
