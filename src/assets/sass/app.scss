@@ -1,3 +1,11 @@
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome.scss";
 @import "~bulma/bulma";
+
+.is-banner {
+  background-color: #000000;
+  background-image: url('/static/img/landscape1.jpg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

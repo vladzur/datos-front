@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar is-info">
+  <nav class="navbar">
     <div class="navbar-brand">
       <router-link class="navbar-item" to="/" exact>
         Home

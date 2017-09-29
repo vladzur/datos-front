@@ -18,6 +18,9 @@
     "firebase": "^4.4.0",
     "font-awesome": "^4.7.0",
     "vue": "^2.4.2",
+    "vue-agile": "^0.2.6",
+    "vue-meta": "^1.2.0",
+    "vue-progressbar": "^0.7.3",
     "vue-router": "^2.7.0",
     "vuefire": "^1.4.4",
     "vuex": "^2.4.0"
