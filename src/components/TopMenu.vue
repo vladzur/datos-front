@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <router-link class="navbar-item" to="/" exact>
-        Home
+        <i class="icon fa fa-home"></i>DatosVillarrica
       </router-link>
       <div class="navbar-burger burger" @click="toggleMenu" :class="{'is-active': navmenu}">
         <span></span>
@@ -15,8 +15,12 @@
         <router-link class="navbar-item" to="/announcements" exact>Anuncios</router-link>
       </div>
       <div class="navbar-end">
-        <router-link v-if="user" class="navbar-item" to="/profile" exact>{{user.name}}</router-link>
-        <router-link v-else class="navbar-item" to="/login" exact>Login</router-link>
+        <router-link v-if="user" class="navbar-item" to="/profile" exact>
+          <i class="icon fa fa-user"></i>{{user.name}}
+        </router-link>
+        <router-link v-else class="navbar-item" to="/login" exact>
+          <i class="icon fa fa-sign-in"></i>Iniciar Sesión
+        </router-link>
       </div>
     </div>
   </nav>

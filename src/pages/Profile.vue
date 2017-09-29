@@ -14,7 +14,14 @@
           </div>
         </div>
         <div class="content">
-          <a class="button" @click="signOut">Cerrar Sesión</a>
+          <div class="control has-icon-left">
+            <a class="button" @click="signOut">
+              <span class="icon is-left">
+                <i class="icon fa fa-sign-out"></i>
+              </span>
+              <span>Cerrar Sesión</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
