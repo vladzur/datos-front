@@ -21,25 +21,22 @@
     <hr>
     <div class="box">
       <div class="field">
-        <label class="label">Title</label>
         <div class="control">
-          <input class="input" type="text" placeholder="Title" v-model="post.title">
+          <input class="input" type="text" placeholder="Título" v-model="post.title">
         </div>
       </div>
       <div class="field">
-        <label class="label">Price</label>
         <div class="control">
-          <input class="input" type="text" placeholder="Description" v-model="post.price">
+          <input class="input" type="text" placeholder="Precio" v-model="post.price">
         </div>
       </div>
       <div class="field">
-        <label class="label">Description</label>
         <div class="control">
-          <textarea class="textarea" v-model="post.description"></textarea>
+          <textarea class="textarea" v-model="post.description" placeholder="Descripción"></textarea>
         </div>
       </div>
       <div class="control">
-        <a class="button is-primary" @click="setItem">Save</a>
+        <a class="button is-primary" @click="setItem">Publicar</a>
       </div>
     </div>
     <div class="box" v-for="(item, key) in userPosts" :key="key">

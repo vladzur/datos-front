@@ -29,8 +29,7 @@ export default new Router({
     {
       path: '/announcements',
       name: 'Announcements',
-      component: Announcements,
-      beforeEnter: AuthGuard
+      component: Announcements
     }
   ],
   mode: 'history'

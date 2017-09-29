@@ -2,12 +2,12 @@
   <div class="container">
     <div class="box">
         <div class="control has-icon-left">
-          <button class="button is-info" @click="signInFacebook">
+          <button class="button is-info" @click="signInGoogle">
             <span class="icon is-small is-left">
-              <i class="fa fa-facebook-official"></i>
+              <i class="fa fa-google"></i>
             </span>
             <span>
-              Iniciar con Facebook
+              Iniciar con Google
             </span>
           </button>
         </div>
