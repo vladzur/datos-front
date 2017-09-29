@@ -1,5 +1,6 @@
 <template>
   <div>
+    <loading v-if="isLoading"/>
     <top-menu/>
     <carousel/>
     <div class="section">
@@ -12,9 +13,10 @@
 <script>
 import Carousel from './components/Carousel'
 import TopMenu from './components/TopMenu'
+import Loading from './components/Loading'
 export default {
   name: 'app',
-  components: { Carousel, TopMenu },
+  components: { Carousel, TopMenu, Loading },
   created () {
     this.$Progress.start()
     this.$router.beforeEach((to, from, next) => {
@@ -29,6 +31,14 @@ export default {
     this.$router.afterEach((to, from) => {
       this.$Progress.finish()
     })
+  },
+  mounted () {
+    this.$Progress.finish()
+  },
+  computed: {
+    isLoading () {
+      return this.$store.getters.loading
+    }
   }
 }
 </script>

@@ -17,8 +17,10 @@ const getters = {
 
 const actions = {
   fetchPosts ({commit, rootState}) {
+    commit('setLoading', true)
     firebase.database().ref('posts/').on('value', snapshot => {
       commit('setPosts', snapshot.val())
+      commit('setLoading', false)
     })
   },
 
