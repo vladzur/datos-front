@@ -71,6 +71,7 @@ const actions = {
         }
         if (user.emailVerified) {
           commit(types.SET_USER, newUser)
+          dispatch('setSuccess', 'Ha iniciado sesión como ' + newUser.name)
         } else {
           dispatch('setError', 'Su correo no ha sido verificado')
         }
@@ -99,7 +100,7 @@ const actions = {
         }
         commit(types.SET_USER, newUser)
         dispatch('setLoading', false)
-        dispatch('setSuccess', 'Bienvenido ' + newUser.name)
+        dispatch('setSuccess', 'Ha iniciado sesión como ' + newUser.name)
       }
       )
       .catch(
