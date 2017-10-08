@@ -5,12 +5,10 @@ import App from './App'
 import router from './router'
 import store from './store'
 import * as firebase from 'firebase'
-import VueFire from 'vuefire'
 import VueAgile from 'vue-agile'
 import VueProgressBar from 'vue-progressbar'
 
 Vue.use(VueAgile)
-Vue.use(VueFire)
 
 const options = {
   color: '#3385ff',

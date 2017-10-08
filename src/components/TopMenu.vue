@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <router-link class="navbar-item" to="/" exact>
-        <i class="icon fa fa-home"></i>DatosVillarrica
+        <img src="/static/img/logo.png">
       </router-link>
       <div class="navbar-burger burger" @click="toggleMenu" :class="{'is-active': navmenu}">
         <span></span>
