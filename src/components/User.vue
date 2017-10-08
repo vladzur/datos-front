@@ -31,7 +31,7 @@ export default {
   props: ['user'],
   methods: {
     signOut () {
-
+      this.$store.dispatch('logout')
     }
   }
 }
