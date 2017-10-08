@@ -4,7 +4,15 @@
       <div class="columns">
         <div class="column is-4 is-offset-4">
           <div class="box">
-            <h1 class="title">Iniciar Sesión</h1>
+            <h1 class="title">Registrarse</h1>
+            <div class="field">
+              <div class="control has-icons-left">
+                <input class="input" type="text" placeholder="John Doe" v-model="user.displayName">
+                <span class="icon is-small is-left">
+                  <i class="fa fa-user"></i>
+                </span>
+              </div>
+            </div>
             <div class="field">
               <div class="control has-icons-left">
                 <input class="input" type="email" placeholder="john@server.com" v-model="user.email">
@@ -22,42 +30,31 @@
               </div>
             </div>
             <div class="control">
-              <a class="button is-primary" @click="login">Ingresar</a> o iniciar sesión con <a class="button is-outline" @click="signInGoogle">
-                <span class="icon is-left">
-                  <i class="icon fa fa-google"></i>
-                </span>
-                oogle
-              </a>
+              <a class="button is-primary" @click="register">Registrarse</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="columns">
-        <div class="column is-4 is-offset-4">
-          <p>No soy usuario, quiero <router-link to="/register">registrarme</router-link></p>
-        </div>
-      </div>
+
     </div>
   </div>
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        user: {
-          email: '',
-          password: ''
-        }
-      }
-    },
-    methods: {
-      login () {
-        this.$store.dispatch('signUserIn', this.user)
-      },
-      signInGoogle () {
-        this.$store.dispatch('signUserInGoogle')
+export default {
+  data () {
+    return {
+      user: {
+        displayName: '',
+        email: '',
+        password: ''
       }
     }
+  },
+  methods: {
+    register () {
+      this.$store.dispatch('signUserUp', this.user)
+    }
   }
+}
 </script>

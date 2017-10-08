@@ -1,68 +1,26 @@
 <template>
   <div class="container">
-    <div class="card">
-      <div class="card-content">
-        <div class="media">
-          <div class="media-left">
-            <figure class="image is-48x48">
-              <img :src="user.photoUrl">
-            </figure>
-          </div>
-          <div class="media-content">
-            <p class="title is-4">{{user.name}}</p>
-            <p class="subtitle is-6">{{user.email}}</p>
-          </div>
-        </div>
-        <div class="content">
-          <div class="control has-icon-left">
-            <a class="button" @click="signOut">
-              <span class="icon is-left">
-                <i class="icon fa fa-sign-out"></i>
-              </span>
-              <span>Cerrar Sesión</span>
-            </a>
-          </div>
-        </div>
+    <div class="columns">
+      <div class="column is-4">
+        <user :user="user" />
+      </div>
+      <div class="column is-8">
+        <post-form @save="setItem"/>
       </div>
     </div>
-    <hr>
-    <div class="box">
-      <div class="field">
-        <div class="control">
-          <input class="input" type="text" placeholder="Título" v-model="post.title">
-        </div>
-      </div>
-      <div class="field">
-        <div class="control">
-          <input class="input" type="text" placeholder="Precio" v-model="post.price">
-        </div>
-      </div>
-      <div class="field">
-        <div class="control">
-          <textarea class="textarea" v-model="post.description" placeholder="Descripción"></textarea>
-        </div>
-      </div>
-      <div class="control">
-        <a class="button is-primary" @click="setItem">Publicar</a>
-      </div>
-    </div>
-    <div class="box" v-for="(item, key) in userPosts" :key="key">
-      <div class="content">
-        <h3>{{item.title}}</h3>
-        <p>{{item.description}}</p>
-        {{key}}
-      </div>
-    </div>
+    <user-posts :posts="userPosts" />
   </div>
 </template>
 
 <script>
-import Post from '../models/post'
+import PostForm from '../components/PostForm'
+import User from '../components/User'
+import UserPosts from '../components/UserPosts'
 export default {
-  data () {
-    return {
-      post: new Post()
-    }
+  components: {
+    PostForm,
+    User,
+    UserPosts
   },
   computed: {
     user () {
@@ -83,10 +41,9 @@ export default {
     signOut () {
       this.$store.dispatch('logout')
     },
-    setItem () {
-      this.post.user = this.user
-      this.$store.dispatch('newItem', this.post)
-      this.post = new Post()
+    setItem (post) {
+      post.user = this.user
+      this.$store.dispatch('newItem', post)
     }
   },
   created () {

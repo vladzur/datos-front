@@ -1,30 +1,24 @@
+import * as types from '../mutation-types'
+
 const state = {
-  loading: false,
-  error: null
+  loading: false
 }
 
-const mutations = {
-  setLoading (state, payload) {
-    state.loading = payload
-  },
-  setError (state, payload) {
-    state.error = payload
-  },
-  clearError (state) {
-    state.error = null
-  }
-}
-const actions = {
-  clearError ({ commit }) {
-    commit('clearError')
-  }
-}
 const getters = {
   loading (state) {
     return state.loading
-  },
-  error (state) {
-    return state.error
+  }
+}
+
+const actions = {
+  setLoading ({ commit }, payload) {
+    commit(types.SET_LOADING, payload)
+  }
+}
+
+const mutations = {
+  [types.SET_LOADING]: (state, payload) => {
+    state.loading = payload
   }
 }
 
