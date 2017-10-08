@@ -5,7 +5,6 @@
       <main-title>Bienvenido a Datos Villarrica</main-title>
       <p>Este sitio está en desarrollo, el contenido que usted publique podría ser eliminado</p>
     </div>
-
   </div>
 </template>
 

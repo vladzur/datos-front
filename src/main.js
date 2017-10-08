@@ -6,8 +6,19 @@ import router from './router'
 import store from './store'
 import * as firebase from 'firebase'
 import VueFire from 'vuefire'
+import VueAgile from 'vue-agile'
+import VueProgressBar from 'vue-progressbar'
 
+Vue.use(VueAgile)
 Vue.use(VueFire)
+
+const options = {
+  color: '#3385ff',
+  failedColor: '#ff4d4d',
+  height: '5px'
+}
+
+Vue.use(VueProgressBar, options)
 
 Vue.config.productionTip = false
 
@@ -30,7 +41,10 @@ new Vue({
     firebase.initializeApp(config)
     firebase.auth().onAuthStateChanged((user) => {
       if (user) {
-        this.$store.dispatch('autoSignIn', user)
+        console.log(user)
+        if (user.emailVerified) {
+          this.$store.dispatch('autoSignIn', user)
+        }
       }
     })
   }

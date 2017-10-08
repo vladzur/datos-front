@@ -1,3 +1,18 @@
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome.scss";
 @import "~bulma/bulma";
+
+/**
+ * Slide animation transition
+ * name: slide-fade
+ */
+ .slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .3s ease;
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(300px);
+  opacity: 0;
+}

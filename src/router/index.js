@@ -5,6 +5,7 @@ import Announcements from '../pages/Announcements'
 import Home from '../pages/Home'
 import Login from '../pages/Login'
 import Profile from '../pages/Profile'
+import Register from '../pages/Register'
 
 Vue.use(Router)
 
@@ -29,8 +30,13 @@ export default new Router({
     {
       path: '/announcements',
       name: 'Announcements',
-      component: Announcements,
-      beforeEnter: AuthGuard
+      component: Announcements
+    },
+    {
+      path: '/register',
+      name: 'Register',
+      component: Register
     }
-  ]
+  ],
+  mode: 'history'
 })
