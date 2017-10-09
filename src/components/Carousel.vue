@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <div>
     <agile :arrows="false" :speed="750" :infinite="true" :autoplay="true" :autoplaySpeed="6000":pauseOnHover="false">
       <span v-for="banner in banners" :key="banner.id">
         <div class="slide" :style="{backgroundImage: banner.slide }">
@@ -8,7 +8,7 @@
       </span>
 
     </agile>
-  </main>
+  </div>
 </template>
 <script>
 export default {

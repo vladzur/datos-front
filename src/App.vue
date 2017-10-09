@@ -1,21 +1,14 @@
 <template>
   <div>
-    <loading v-if="isLoading"/>
+    <loading v-if="isLoading" />
     <transition name="slide-fade">
       <div v-if="showMessage">
-        <notification
-        :message="message.text"
-        :className="message.className"
-        @close="hideMessage"
-        />
+        <notification :message="message.text" :className="message.className" @close="hideMessage" />
       </div>
     </transition>
     <top-menu/>
-    <carousel/>
-    <div class="section">
-      <router-view></router-view>
-      <vue-progress-bar></vue-progress-bar>
-    </div>
+    <router-view></router-view>
+    <vue-progress-bar></vue-progress-bar>
   </div>
 </template>
 

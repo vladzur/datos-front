@@ -1,7 +1,9 @@
 <template>
-  <div class="container">
-    <h1 class="title">Anuncios</h1>
-    <posts-list :posts="posts"/>
+  <div class="section">
+    <div class="container">
+      <h1 class="title">Anuncios</h1>
+      <posts-list :posts="posts" />
+    </div>
   </div>
 </template>
 

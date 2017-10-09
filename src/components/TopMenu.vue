@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar">
+  <nav class="navbar is-light">
     <div class="navbar-brand">
       <router-link class="navbar-item" to="/" exact>
         <img src="/static/img/logo.png">
