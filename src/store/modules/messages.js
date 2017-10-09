@@ -58,7 +58,7 @@ const actions = {
   setMessage: ({commit, dispatch}, payload) => {
     commit(types.SET_MESSAGE, payload)
     dispatch('showMessage')
-    setInterval(() => {
+    setTimeout(() => {
       dispatch('hideMessage')
     }, 4000)
   }
