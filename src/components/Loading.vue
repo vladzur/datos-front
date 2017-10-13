@@ -12,15 +12,16 @@ export default {
 
 <style scoped>
 .loading {
-  width: 250px;
-  height: 100px;
+  width: 12em;
+  height: 8em;
   opacity: 0.7;
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   background-color: grey;
   z-index: 100;
-  border: 25px solid #9999;
+  border: 15px solid #9999;
   border-radius: 15px;
   box-shadow: 5px 5px 15px black;
 }

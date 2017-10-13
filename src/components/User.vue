@@ -3,8 +3,8 @@
     <div class="card-content">
       <div class="media">
         <div class="media-left">
-          <figure class="image is-48x48">
-            <img :src="user.photoUrl">
+          <figure>
+            <img :src="user.photoUrl" class="avatar">
           </figure>
         </div>
         <div class="media-content">
@@ -36,3 +36,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.avatar {
+ object-fit: cover;
+  border-radius:50%;
+  width: 150px;
+  height: 150px;
+}
+</style>
+

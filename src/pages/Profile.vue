@@ -1,14 +1,16 @@
 <template>
-  <div class="container">
-    <div class="columns">
-      <div class="column is-4">
-        <user :user="user" />
+  <div class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-4">
+          <user :user="user" />
+        </div>
+        <div class="column is-8">
+          <post-form @save="setItem" />
+        </div>
       </div>
-      <div class="column is-8">
-        <post-form @save="setItem"/>
-      </div>
+      <user-posts :posts="userPosts" />
     </div>
-    <user-posts :posts="userPosts" />
   </div>
 </template>
 
@@ -30,13 +32,7 @@ export default {
       return this.$store.getters.userPosts
     }
   },
-  watch: {
-    user (value) {
-      if (!value) {
-        this.$router.push('/')
-      }
-    }
-  },
+
   methods: {
     signOut () {
       this.$store.dispatch('logout')
